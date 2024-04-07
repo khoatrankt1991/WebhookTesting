@@ -10,7 +10,7 @@ app.get('/healthcheck', (req, res) => {
     res.status(200).send('OK');
 });
 app.post('/webhook', (req, res) => {
-    console.log('Received Webhook:', req.body);
+    console.log('Received Webhook:', JSON.stringify(req.body, 0, 4));
     res.status(200).send('OK');
 });
 
